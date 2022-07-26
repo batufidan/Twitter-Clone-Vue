@@ -1,5 +1,9 @@
 # twitter-clone (twitter-clone)
 
+
+https://user-images.githubusercontent.com/98849270/180996400-bca25714-9096-4262-9725-20b381909c48.mp4
+
+
 Author Batuhan Fidan
 
 ## Install the dependencies
