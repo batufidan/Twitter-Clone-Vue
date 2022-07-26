@@ -1,40 +1,41 @@
 <template>
   <q-page class="relative-position">
-    <q-scroll-area class="absolute fullscreen">
+    <q-scroll-area class="absolute full-width full-height">
       <div class="q-py-lg q-px-md row items-end q-col-gutter-md">
-        <div class="col"></div>
-        <div class="col"></div>
-
-        <q-input
-          v-model="newQweetContent"
-          class="new-qweet"
-          placeholder="What's happening?"
-          maxlength="280"
-          bottom-slots
-          counter
-          autogrow
-        >
-          <template v-slot:before>
-            <q-avatar size="xl">
-              <img src="https://avatars.githubusercontent.com/u/98849270?v=4" />
-            </q-avatar>
-          </template>
-        </q-input>
+        <div class="col">
+          <q-input
+            v-model="newQweetContent"
+            class="new-qweet"
+            placeholder="What's happening?"
+            maxlength="280"
+            bottom-slots
+            counter
+            autogrow
+          >
+            <template v-slot:before>
+              <q-avatar size="xl">
+                <img
+                  src="https://avatars.githubusercontent.com/u/98849270?v=4"
+                />
+              </q-avatar>
+            </template>
+          </q-input>
+        </div>
+        <div class="col col-shrink">
+          <q-btn
+            @click="addNewTweet"
+            :disable="!newTwitterContent"
+            class="q-mb-lg"
+            unelevated
+            rounded
+            color="primary"
+            label="Tweet"
+            no-caps
+          />
+        </div>
       </div>
-      <div class="col col-shrink">
-        <q-btn
-          @click="addNewTweet"
-          :disable="!newTwitterContent"
-          class="q-mb-lg"
-          unelevated
-          rounded
-          color="primary"
-          label="Tweet"
-          no-caps
-        />
-      </div>
-      <q-separator class="divider" size="10px" color="grey-2" />
 
+      <q-separator class="divider" color="grey-2" size="10px" />
       <q-list separator>
         <transition-group
           appear
@@ -54,7 +55,7 @@
               <q-item-label class="text-subtitle1">
                 <strong>Batuhan Fidan</strong>
                 <span class="text-grey-7"
-                  >@batuhanfidan0 <br class="lt-md" />&bull; {{ tweet.date }}
+                  >@batuhanfidan0 {{ tweet.username }}
                 </span>
               </q-item-label>
               <q-item-label class="tweet-content text-body1"
@@ -109,12 +110,62 @@ export default {
         {
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
-          date: 1658756118119,
+          date: "30 second ago",
         },
         {
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
-          date: 1658756166953,
+          date: "1 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "3 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "5 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "9 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "12 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "20 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "27 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "28 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "28 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "29 minutes ago",
+        },
+        {
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum inventore quod labore provident facere laudantium tempore impedit repellendus recusandae beatae excepturi tenetur necessitatibus quasi in numquam qui quis natus?",
+          date: "29 minutes ago",
         },
       ],
     };
